@@ -1,20 +1,16 @@
-#  TITLE
-DESCRIPTION ...
-
-## 🧰 Example:
-```swift
-```
+#  Clear app clone
+Clone the Clear Stocks app to learn more about SwiftUI
 
 ## ℹ️  GETTING STARTED
 ### PREREQUISITES 
-- Swift 4+
-- Xcode 10+
+- Swift 5.7+
+- Xcode 14+
 
 ### INSTALATION
 1. Open your terminal in location that you want save the project.
 2. Clone the repo in this local.
 ```sh
-git clone https://github.com/PaoloProdossimoLopes/repository-template.git
+git clone https://github.com/PaoloProdossimoLopes/swiftui-clear-app-clone.git
 ```
 3. Open the file with extension .xcodeproj inside the folder project.
    
