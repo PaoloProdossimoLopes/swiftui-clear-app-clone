@@ -1,11 +1,15 @@
 import SwiftUI
 
 enum LaunchFactory {
-    static func make() -> some View {
+    static func make(nextView: @escaping () -> some View) -> some View {
         let navigatorViewModel = NavigatorViewModel()
-        let navigator = Navigator(model: navigatorViewModel, content: EmptyView.init)
+        let navigator = Navigator(model: navigatorViewModel, content: nextView)
         
-        let view = LaunchController(completion: navigatorViewModel.active)
+        let view = LaunchController(completion: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                navigatorViewModel.active()
+            }
+        })
         
         return VStack {
             navigator

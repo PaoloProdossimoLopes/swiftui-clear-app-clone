@@ -4,7 +4,11 @@ import SwiftUI
 struct ClearCloneApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView(content: LaunchFactory.make)
+            NavigationView(content: makeLaunch)
         }
+    }
+    
+    private func makeLaunch() -> some View {
+        return LaunchFactory.make(nextView: LoginFactory.make)
     }
 }
