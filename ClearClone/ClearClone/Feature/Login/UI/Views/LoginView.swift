@@ -42,12 +42,20 @@ private struct LoginImageContainer: View {
         ZStack {
             Color.blue.ignoresSafeArea()
             
-            Image("")
-                .resizable()
-                .scaledToFit()
-                .frame(maxWidth: 200)
-                .frame(height: 450)
+            ClearLogo()
         }
+    }
+}
+
+struct ClearLogo: View {
+    var body: some View {
+        Image("corretora-clear")
+            .renderingMode(.template)
+            .resizable()
+            .scaledToFit()
+            .foregroundColor(.white)
+            .frame(maxWidth: 200)
+            .frame(height: 450)
     }
 }
 
