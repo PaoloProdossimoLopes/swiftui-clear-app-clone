@@ -9,10 +9,17 @@ struct BaseButton: View {
     var body: some View {
         Button(action: action) {
             HStack {
-                Image(systemName: image)
+                Spacer()
+                
+                if image.isEmpty == false {
+                    Image(systemName: image)
+                }
+                
                 Text(title)
                     .foregroundColor(titleColor)
                     .font(.system(size: 14, weight: .bold))
+                
+                Spacer()
             }
             .frame(height: 50)
         }

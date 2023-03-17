@@ -4,7 +4,7 @@ enum LoginFactory {
     static func make(authenticate: @escaping Bind) -> some View {
         let navigatorViewModel = NavigatorViewModel()
         let navigator = Navigator(model: navigatorViewModel, content: {
-            Text("Token")
+            TabBarView()
         })
         let controller = LoginController(removeAccountAction: {
             print("DEBUG: Remove account")

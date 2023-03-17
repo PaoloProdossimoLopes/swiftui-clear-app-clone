@@ -30,6 +30,7 @@
 		B1140FC429C435200074F6FC /* AnimatedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1140FC329C435200074F6FC /* AnimatedColor.swift */; };
 		B1140FC729C4353A0074F6FC /* AuthenticateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1140FC629C4353A0074F6FC /* AuthenticateView.swift */; };
 		B1140FC929C435520074F6FC /* TransparentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1140FC829C435520074F6FC /* TransparentView.swift */; };
+		B1140FCC29C488E80074F6FC /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1140FCB29C488E80074F6FC /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		B1140FC329C435200074F6FC /* AnimatedColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedColor.swift; sourceTree = "<group>"; };
 		B1140FC629C4353A0074F6FC /* AuthenticateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateView.swift; sourceTree = "<group>"; };
 		B1140FC829C435520074F6FC /* TransparentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentView.swift; sourceTree = "<group>"; };
+		B1140FCB29C488E80074F6FC /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,13 +207,6 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		B1140F9629C334AD0074F6FC /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
 		B1140F9729C334B20074F6FC /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,23 +215,10 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		B1140F9829C334BB0074F6FC /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		B1140F9929C334C00074F6FC /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		B1140F9A29C334CF0074F6FC /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				B1140FCA29C488D80074F6FC /* Tab */,
 				B1140FBA29C423B50074F6FC /* Authenticate */,
 				B1140F9E29C335E50074F6FC /* Launch */,
 				B1140FA129C33DED0074F6FC /* Login */,
@@ -282,10 +264,7 @@
 		B1140FA129C33DED0074F6FC /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B1140F9929C334C00074F6FC /* API */,
-				B1140F9829C334BB0074F6FC /* Domain */,
 				B1140F9729C334B20074F6FC /* Main */,
-				B1140F9629C334AD0074F6FC /* Presentation */,
 				B1140F9529C334A50074F6FC /* UI */,
 			);
 			path = Login;
@@ -373,6 +352,14 @@
 				B1140FC629C4353A0074F6FC /* AuthenticateView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B1140FCA29C488D80074F6FC /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				B1140FCB29C488E80074F6FC /* TabBar.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +494,7 @@
 			files = (
 				B1140FC929C435520074F6FC /* TransparentView.swift in Sources */,
 				B1140F6829C330B80074F6FC /* LaunchController.swift in Sources */,
+				B1140FCC29C488E80074F6FC /* TabBar.swift in Sources */,
 				B1140FA429C33E1B0074F6FC /* Navigator.swift in Sources */,
 				B1140FAF29C34EA20074F6FC /* LoginView.swift in Sources */,
 				B1140FB129C34ECA0074F6FC /* LoginFactory.swift in Sources */,

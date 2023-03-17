@@ -1,6 +1,6 @@
 import SwiftUI
 
-class NavigatorViewModel: ObservableObject {
+final class NavigatorViewModel: ObservableObject {
     @Published var isActive = false
     
     func active() {

@@ -7,20 +7,23 @@ struct ClearCloneApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView(content: makeLaunch)
+                .fullScreenCover(isPresented: $isAutahenticate, content: makeAuthenticate)
         }
-        
     }
     
     private func makeLaunch() -> some View {
-        return LaunchFactory.make {
-            return LoginFactory.make(authenticate: {
-                isAutahenticate = true
-            })
-        }
-        .fullScreenCover(isPresented: $isAutahenticate) {
-            AuthenticateFactory.make(cancel: {
-                isAutahenticate = false
-            })
-        }
+        LaunchFactory.make(nextView: makeLogin)
+    }
+    
+    private func makeLogin() -> some View {
+        LoginFactory.make(authenticate: {
+            isAutahenticate = true
+        })
+    }
+    
+    private func makeAuthenticate() -> some View {
+        AuthenticateFactory.make(cancel: {
+            isAutahenticate = false
+        })
     }
 }
