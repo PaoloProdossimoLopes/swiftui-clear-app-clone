@@ -1,29 +1,24 @@
 import SwiftUI
 
 enum LoginFactory {
-    static func make() -> some View {
-        return LoginController(removeAccountAction: {
+    static func make(authenticate: @escaping Bind) -> some View {
+        let navigatorViewModel = NavigatorViewModel()
+        let navigator = Navigator(model: navigatorViewModel, content: {
+            Text("Token")
+        })
+        let controller = LoginController(removeAccountAction: {
             print("DEBUG: Remove account")
         }, clearTokenAction: {
             print("DEBUG: Clear token")
-        }, acessAccountAction: {
+            navigatorViewModel.active()
+        }, acessAccountAction: { [authenticate] in
             print("DEBUG: Access account")
+            authenticate()
         })
-        .navigationBarBackButtonHidden()
-    }
-}
-
-enum AuthenticateFactory {
-    static func make() -> some View {
-        return ZStack {
-            Spacer()
-            
-            VStack {
-                Text("Title")
-                Spacer()
-            }
-            .background(.white)
-            .cornerRadius(8)
+        return VStack {
+            navigator
+            controller
         }
+        .navigationBarBackButtonHidden()
     }
 }
